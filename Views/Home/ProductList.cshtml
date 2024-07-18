@@ -1,0 +1,12 @@
+﻿@model ProdCategory
+
+<div>
+    <form asp-action="GetProductList" data-ajax="true" data-ajax-method="get" data-ajax-update="#ProductList">
+        <select asp-items="@ViewBag.cat" asp-for="PcId">
+        </select>
+
+        <input type="submit" class="btn bg-blue-700 px-5 py-2.5 text-white w-full rounded-lg text-center text-sm font-medium hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 sm:w-auto dark:hover:bg-blue-700 dark:focus:ring-blue-800" value="Submit" />
+    </form>
+    <div id="ProductList">
+    </div>
+</div>

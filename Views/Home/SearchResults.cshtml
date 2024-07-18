@@ -1,0 +1,11 @@
+﻿@model IEnumerable<ProductEdit>
+
+@{
+    ViewData["Title"] = "Search Results";
+}
+
+<h1>Search Results for Category ID: "@ViewData["Category"]"</h1>
+
+<div id="products-partial">
+    @await Html.PartialAsync("_ProductsPartial", ViewData["Products"] as IEnumerable<ProductEdit>)
+</div>
